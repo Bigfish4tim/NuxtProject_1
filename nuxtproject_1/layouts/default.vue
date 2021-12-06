@@ -105,6 +105,21 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire'
+        },
+        {
+          icon: 'mdi-mouse-off',
+          title: 'Test',
+          to: '/test'
+        },
+        {
+          icon: 'mdi-mouse-off',
+          title: 'Main',
+          to: '/mainpage'
+        },
+        {
+          icon: 'mdi-mouse-off',
+          title: 'Sub',
+          to: '/subpage'
         }
       ],
       miniVariant: false,

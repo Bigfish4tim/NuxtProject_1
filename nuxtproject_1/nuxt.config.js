@@ -27,8 +27,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: ['~/plugins/etc'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -47,16 +46,23 @@ export default {
     '@nuxtjs/axios',
   ],
 
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js' }
+  ],
+  
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:3000'
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      light: true,
       themes: {
-        dark: {
+        light: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
